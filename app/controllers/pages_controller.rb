@@ -26,6 +26,20 @@ class PagesController < ApplicationController
     #params[:page] gives me the form fields
   end
 
+  def edit
+    @page = Page.find(params[:id])
+  end
+
+  def update
+    @page = Page.find(params[:id])
+
+    if (@page.update(pages_params))
+      redirect_to pages_path
+    else
+      render :edit
+    end
+  end
+
   private
 
   def pages_params
