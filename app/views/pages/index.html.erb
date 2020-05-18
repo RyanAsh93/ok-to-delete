@@ -4,5 +4,6 @@
   <h2><%= page.title%></h2>
   <%= link_to 'Show Page', page_path(page) %>
   <%= link_to 'Edit Page', edit_page_path(page) %>
+  <%= link_to 'Delete Page', page_path(page), method: :delete %>
   <%# <a href="/pages/1">Show Page</a> %>
 <% end %>
